@@ -40,31 +40,47 @@
     <!-- JSON-LD conforming to Google Structured Data specification. -->
     <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Dataset",
-      "name" : "British Rowing Activities",
-      "id": "https://britishrowing.github.io/",
+      "@context": [
+        "https://schema.org/",
+        "https://openactive.io/"
+      ],
+      "@type": "Dataset",
+      "@id": "https://britishrowing.github.io/",
       "url": "https://britishrowing.github.io/",
-      "description" : "Activities data from the britishrowing.org site; published using OpenActive RPDE v0.2.3.",
+      "name": "British Rowing Activities",
+      "description": "Activities data from the britishrowing.org site; published using OpenActive RPDE v0.2.3.",
       "keywords":[
-         "Rowing",
-         "",
-         "OpenActive"
+          "Rowing",
+          "",
+          "OpenActive"
       ],
       "license" : "https://creativecommons.org/licenses/by/4.0/",
-      "distribution" : {
-        "@type" : "DataDownload",
-        "encodingFormat" : "application/vnd.openactive.rpde+json; version=0.2.3",
-        "contentUrl" : "http://api.britishcycling.com/openactive/rpde"
-      },
-      "inLanguage": "en-GB",
+      "distribution": [
+        {
+          "@type" : "DataDownload",
+          "encodingFormat" : "application/vnd.openactive.rpde+json; version={rpdeversion}",
+          "contentUrl" : "http://api.britishcycling.com/openactive/rpde"
+        }
+      ],
+      "discussionUrl": "https://github.com/britishcycling-oa/opendata/issues",
+      "documentation": "https://github.com/britishcycling-oa/opendata",
+      "inLanguage": [
+        "en-GB"
+      ],
       "publisher": {
-         "@type": "Organization", 
-         "name": "British Rowing",
-         "url": "https://www.britishrowing.org/",
-         "logo": "https://britishrowing.github.io/images/logo.png"
+        "@type": "Organization",
+        "name": "British Rowing",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://britishrowing.github.io/images/logo.png"
+        },
+        "url": "https://www.britishrowing.org/"
       },
-      "datePublished" : "2014-07-20T00:00:00.000Z"
+      "datePublished": "2014-07-20T00:00:00.000Z",
+      "backgroundImage": {
+        "@type": "ImageObject",
+        "url": "https://britishrowing.github.io/images/bg.jpg"
+      }
     }
     </script>
   </head>
